@@ -120,7 +120,7 @@ function on_commandline(event) {
 					ui.get_commandline(location).select();
 					return true;
 				}
-			ui.set_error(location,"could not "+line);
+			ui.set_error(location,"could not "+line+" - for a list of commands, type \"HELP\"");
 			ui.get_commandline(location).select();
 		}
 	}
@@ -187,8 +187,10 @@ function get_commands(location,standard_commands,just_first) {
 			add_message(current_location,exits);
 		},
 	};
-	if(!just_first)
+	if(!just_first) {
 		commands["inv"] = commands["inventory"];
+		commands["\"help\""] = commands["help"];
+	}
 	var command, object;
 	if(standard_commands)
 		commands = union(commands,standard_commands);

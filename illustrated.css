@@ -26,6 +26,11 @@ body {
 }
 .error {
 	color: red;
+	display: inline;
+	-webkit-border-radius: .5em; 
+	-moz-border-radius: .5em;
+	border-radius: .5em;
+	background-color: rgba(255,255,0,0.7);
 }
 .commandline {
 	width: 80%;
@@ -37,4 +42,12 @@ body {
 }
 .speech {
 	color: cyan;
+}
+.message {
+	-webkit-border-radius: .5em; 
+	-moz-border-radius: .5em;
+	border-radius: .5em;
+}
+.message:hover {
+	background-color: rgba(80,80,80,0.8);
 }

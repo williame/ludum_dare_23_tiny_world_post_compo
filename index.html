@@ -22,7 +22,9 @@ function init() {
 		for(var ui_choice in uis)
 			html += "<button onclick=\"set_ui(uis["+ui_choice+"]); event.stopPropagation(); dismiss_modal(); new_game(); return false;\">"+uis[ui_choice].name+"</button> ";
 		html += "(You can also switch between them in-game using ctrl-b key)<br/>"+
-			"This game was made in 72 hours for the <a href=\"http://www.ludumdare.com/compo/ludum-dare-23/?action=preview&uid=10313\">Ludum Dare 23 Jam</a>!";
+			"This game was made in 72 hours for the <a href=\"http://www.ludumdare.com/compo/ludum-dare-23/?action=preview&uid=10313\">Ludum Dare 23 Jam</a>!<br/><br/>"+
+			"This is an updated version with different fonts etc; to play the original, competition version go to:<br/>"+
+			"<a href=\"http://williame.github.com/ludum_dare_23_tiny_world/\">http://williame.github.com/ludum_dare_23_tiny_world/</a>";
 		splash.innerHTML = html;
 		show_modal(splash);
 		var dismiss = modaliser.dismiss;
